@@ -69,7 +69,7 @@ export default function LandingPage() {
 
 
         try {
-            const response = await fetch('http://localhost:5000/api/check', {
+            const response = await fetch('https://vedali-pawar-aiplagiarism.onrender.com', {
                 method: 'POST',
                 body: formData,
             });
