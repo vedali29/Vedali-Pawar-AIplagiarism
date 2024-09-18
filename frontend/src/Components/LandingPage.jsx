@@ -67,7 +67,7 @@ export default function LandingPage() {
 
 
         try {
-            const response = await fetch('https://vedali-pawar-aiplagiarism.onrender.com', {
+            const response = await fetch('https://vedali-pawar-aiplagiarism.onrender.com/api/check', {
                 method: 'POST',
                 body: formData,
             });
