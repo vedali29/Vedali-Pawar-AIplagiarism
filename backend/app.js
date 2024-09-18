@@ -6,7 +6,17 @@ const app = express();
 require('dotenv').config();
 
 
-app.use(cors());
+const allowedOrigins = ['http://localhost:3000', 'https://aiplagiarism.netlify.app'];
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+}));
 app.use(express.json());
 app.use(fileUpload());
 
