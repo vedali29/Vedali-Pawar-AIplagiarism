@@ -19,8 +19,6 @@ export default function LandingPage() {
     const [inputError, setInputError] = useState(null);
     const fileInputRef = useRef(null);
 
-
-
     const handleFileChange = (e) => {
         const selectedFile = e.target.files[0];
         if (selectedFile && (selectedFile.type === 'application/pdf' || selectedFile.type === 'application/msword' || selectedFile.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document')) {
